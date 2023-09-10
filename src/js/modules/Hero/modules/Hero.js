@@ -1,6 +1,6 @@
-import { Effect } from './modules/Effect';
+import { Effect } from './Effect';
 
-class Hero {
+export class Hero {
   constructor() {
     this.canvas = document.getElementById('hero');
     this.ctx = this.canvas.getContext('2d', {
@@ -32,11 +32,3 @@ class Hero {
     requestAnimationFrame(this.animate);
   };
 }
-
-const initHero = () => {
-  const hero = new Hero();
-  hero.init();
-  hero.animate();
-};
-
-export { initHero };
