@@ -1,0 +1,26 @@
+.cards {
+  max-width: 1248px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    max-width: 824px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    border-radius: 16px;
+    transition: box-shadow 1s ease;
+  }
+
+  img:hover {
+    box-shadow: 0 0 20px 0 $soft;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+}

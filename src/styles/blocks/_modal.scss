@@ -1,0 +1,10 @@
+.modal {
+  border: none;
+}
+
+.modal__wrapper {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 600px 300px;
+  gap: 16px;
+}
