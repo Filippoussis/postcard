@@ -3,10 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postcard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.scss"/>
+  <title>RooX Amazing Postcard</title>
 </head>
 <body>
+  <canvas id="hero"></canvas>
+  <ul class="cards">
+    <li>
+      <img src="./images/image1-small@1x.webp" srcset="./images/image1-small@2x.webp 2x" alt="image1" width="400" height="600" data-value="1">
+    </li>
+    <li>
+      <img src="./images/image2-small@1x.webp" srcset="./images/image2-small@2x.webp 2x" alt="image2" width="400" height="600" data-value="2">
+    </li>
+    <li>
+      <img src="./images/image3-small@1x.webp" srcset="./images/image3-small@2x.webp 2x" alt="image3" width="400" height="600" data-value="3">
+    </li>
+    <li>
+      <img src="./images/image4-small@1x.webp" srcset="./images/image4-small@2x.webp 2x" alt="image4" width="400" height="600" data-value="4">
+    </li>
+    <li>
+      <img src="./images/image5-small@1x.webp" srcset="./images/image5-small@2x.webp 2x" alt="image5" width="400" height="600" data-value="5">
+    </li>
+    <li>
+      <img src="./images/image6-small@1x.webp" srcset="./images/image6-small@2x.webp 2x" alt="image6" width="400" height="600" data-value="6">
+    </li>
+    <li>
+      <img src="./images/image7-small@1x.webp" srcset="./images/image7-small@2x.webp 2x" alt="image7" width="400" height="600" data-value="7">
+    </li>
+    <li>
+      <img src="./images/image8-small@1x.webp" srcset="./images/image8-small@2x.webp 2x" alt="image8" width="400" height="600" data-value="8">
+    </li>
+    <li>
+      <img src="./images/image9-small@1x.webp" srcset="./images/image9-small@2x.webp 2x" alt="image9" width="400" height="600" data-value="9">
+    </li>
+    <li>
+      <img src="./images/image10-small@1x.webp" srcset="./images/image10-small@2x.webp 2x" alt="image10" width="400" height="600" data-value="10">
+    </li>
+    <li>
+      <img src="./images/image11-small@1x.webp" srcset="./images/image11-small@2x.webp 2x" alt="image11" width="400" height="600" data-value="11">
+    </li>
+    <li>
+      <img src="./images/image12-small@1x.webp" srcset="./images/image12-small@2x.webp 2x" alt="image12" width="400" height="600" data-value="12">
+    </li>
+  </ul>
+  <dialog id="modal" class="modal">
+    <div class="modal__wrapper">
+      <canvas id="draft" width="600" height="900"></canvas>
+      <form class="form" action="" id="form">
+        <button type="button" class="form__close"></button>
+        <label for="form-input">
+          <h3>Обращение:</h3>
+          <input
+            class="form__input"
+            type="text"
+            id="form-input"
+            name="heading"
+            autofocus
+            maxlength="30"
+          >
+        </label>
+        <label for="form-textarea">
+          <h3>Пожелание:</h3>
+          <textarea class="form__textarea" id="form-textarea" name="message" rows="5" maxlength="160"></textarea>
+        </label>
+        <div>
+          <h3>Цвет текста:</h3>
+          <input class="form__color" id="form-color" name="color" type="color"></input>
+        </div>
+        <button class="form__submit">Сохранить как JPEG файл</button>
+      </form>
+    </div>
+  </dialog>
   <script src="./js/main.js" type="module"></script>
 </body>
 </html>
