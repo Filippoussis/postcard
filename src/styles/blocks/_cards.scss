@@ -8,19 +8,43 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 
-  @media (max-width: 1024px) {
-    max-width: 824px;
-    grid-template-columns: 1fr 1fr;
+  li {
+    position: relative;
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: 'Create Postcard';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      text-align: center;
+      color: red;
+      opacity: 0.5;
+    }
+  }
+
+  li:hover {
+    &::before {
+      display: block;
+    }
   }
 
   img {
     border-radius: 16px;
-    transition: box-shadow 1s ease;
   }
 
   img:hover {
-    box-shadow: 0 0 20px 0 $soft;
+    filter: opacity(20%);
+    box-shadow: 0 0 40px 0 $soft;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 824px;
+    grid-template-columns: 1fr 1fr;
   }
 }
